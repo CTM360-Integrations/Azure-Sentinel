@@ -2,7 +2,7 @@ id: 0faddbac-0004-40fa-9046-a1ead13e005a
 name: Domain Infringemen
 description: |
   'Domain Infringemen'
-severity: Informational
+severity: Low
 status: Available
 requiredDataConnectors:
   - connectorId: CBSPollingIDAzureFunctions
