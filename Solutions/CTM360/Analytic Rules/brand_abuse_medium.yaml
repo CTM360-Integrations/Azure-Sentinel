@@ -25,9 +25,6 @@ incidentConfiguration:
     reopenClosedIncident: false
     lookbackDuration: PT5H
     matchingMethod: AllEntities
-    groupByEntities: []
-    groupByAlertDetails: []
-    groupByCustomDetails: []
 eventGroupingSettings:
   aggregationKind: SingleAlert
 suppressionDuration: 5h
