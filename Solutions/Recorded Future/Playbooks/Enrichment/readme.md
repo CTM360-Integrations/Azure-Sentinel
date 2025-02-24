@@ -5,7 +5,8 @@ More information about Recorded Future Intelligence Solution for Microsoft Senti
 ## RecordedFuture-IOC_Enrichment
 Type: **Response**\
 Included in Recorded Future Intelligence Solution: **Yes**\
-Requires **/recordedfuturev2** API keys as described in the [Connector authorization](../readme.md#connectors-authorization) section. 
+Requires **/recordedfuturev2** API keys as described in the [Connector authorization](../readme.md#connectors-authorization) section.\
+Connectors used: ***recordedfuturev2*** and ***azuresentinel***, see [Connector authorization](../readme.md#connectors-authorization) for guidance.
 
 Enriches IOCs (IPs, Domains, URLs and hashes) in Microsoft Sentinel incidents with Recorded Future Intelligence. The Playbook adds the following data for all IOCs an incident: 
 
@@ -40,7 +41,7 @@ This will trigger the Recorded Future playbook to run when any incident is creat
 The Recorded Future Collective Insights aggregates data related to Sigma Rules and other indicators, driving collective insights to better identify threats. Anonymized, unattributable data is collected for analytical purposes to identify trends and insights with the Collective Insights. The **RecordedFuture-IOC_Enrichment** playbook gives end users the ability to contribute collective insights to the Collective Insights.
 <a href="https://support.recordedfuture.com/hc/en-us/articles/19308547864339" target="_blank">Click here to learn more</a> (requires Recorded Future Login)
 
-To opt-out from Collective insights by setting the CollectiveInsights parameter to [false]
+To opt-out from Collective insights by setting the IntelligenceCloud parameter to [false]
 
 <img src="./RecordedFuture-IOC_Enrichment/images/IntelligenceCloudParameter.png" width="500"><br/>
 
