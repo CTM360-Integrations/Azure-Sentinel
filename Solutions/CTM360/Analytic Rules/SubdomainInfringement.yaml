@@ -33,8 +33,6 @@ incidentConfiguration:
     matchingMethod: AllEntities
 eventGroupingSettings:
   aggregationKind: AlertPerResult
-alertDetailsOverride:
-  alertDynamicProperties: []
 suppressionDuration: 5h
 version: 1.0.3
 kind: Scheduled
