@@ -37,6 +37,8 @@ incidentConfiguration:
     matchingMethod: AllEntities
 eventGroupingSettings:
   aggregationKind: SingleAlert
+alertDetailsOverride:
+  alertDynamicProperties: []
 entityMappings:
 - entityType: IP
   fieldMappings:

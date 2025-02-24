@@ -6,7 +6,7 @@
     "config": {
       "isWizard": false,
       "basics": {
-        "description": "<img src=\"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Logos/CTM360Logo.svg\" width=\"75px\" height=\"75px\">\n\n**Note:** Please refer to the following before installing the solution: \n\n• Review the solution [Release Notes](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/CTM360/ReleaseNotes.md)\n\n • There may be [known issues](https://aka.ms/sentinelsolutionsknownissues) pertaining to this Solution, please refer to them before installing.\n\nThe [HACKERVIEW](https://hackerview.ctm360.com/) and [CBS](https://cbs.ctm360.com/) solutions for Microsoft Sentinel enable you to ingest their respective event data into Microsoft Sentinel using the REST API. This integration streamlines the process of collecting and analyzing security event information. With these solutions, you can enhance your organization's ability to detect and respond to potential security threats effectively.\n\n## HACKERVIEW\n\n[HACKERVIEW](https://hackerview.ctm360.com/) is CTM360s External Attack Surface Management platform. It combines automated asset discovery, issue identification/management, remediation guidelines, security ratings, and third-party risk management. This platform maps your organizations digital presence automatically, operating in a passive and non-intrusive manner leveraging data in the public domain.\n\n## CyberBlindspot\n\n[CyberBlindspot](https://cbs.ctm360.com/) is CTM360 Digital Risk Protection platform which combines surface, deep, and dark web monitoring, including brand protection, anti-phishing, and takedowns. The platform enables you to take action on incidents derived from threat intelligence that is directly linked to your organization.\n\n**Data Connectors:** 2, **Analytic Rules:** 103\n\n[Learn more about Microsoft Sentinel](https://aka.ms/azuresentinel) | [Learn more about Solutions](https://aka.ms/azuresentinelsolutionsdoc)",
+        "description": "<img src=\"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Logos/CTM360Logo.svg\" width=\"75px\" height=\"75px\">\n\n**Note:** Please refer to the following before installing the solution: \n\n• Review the solution [Release Notes](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/CTM360/ReleaseNotes.md)\n\n • There may be [known issues](https://aka.ms/sentinelsolutionsknownissues) pertaining to this Solution, please refer to them before installing.\n\nThe [HACKERVIEW](https://hackerview.ctm360.com/) and [CBS](https://cbs.ctm360.com/) solutions for Microsoft Sentinel enable you to ingest their respective event data into Microsoft Sentinel using the REST API. This integration streamlines the process of collecting and analyzing security event information. With these solutions, you can enhance your organization's ability to detect and respond to potential security threats effectively.\n\n## HACKERVIEW\n\n[HACKERVIEW](https://hackerview.ctm360.com/) is CTM360s External Attack Surface Management platform. It combines automated asset discovery, issue identification/management, remediation guidelines, security ratings, and third-party risk management. This platform maps your organizations digital presence automatically, operating in a passive and non-intrusive manner leveraging data in the public domain.\n\n## CyberBlindspot\n\n[CyberBlindspot](https://cbs.ctm360.com/) is CTM360 Digital Risk Protection platform which combines surface, deep, and dark web monitoring, including brand protection, anti-phishing, and takedowns. The platform enables you to take action on incidents derived from threat intelligence that is directly linked to your organization.\n\n**Data Connectors:** 2, **Analytic Rules:** 115\n\n[Learn more about Microsoft Sentinel](https://aka.ms/azuresentinel) | [Learn more about Solutions](https://aka.ms/azuresentinelsolutionsdoc)",
         "subscription": {
           "resourceProviders": [
             "Microsoft.OperationsManagement/solutions",
@@ -517,10 +517,66 @@
           {
             "name": "analytic30",
             "type": "Microsoft.Common.Section",
-            "label": "Code Repository",
+            "label": "Breached Credential (High)",
             "elements": [
               {
                 "name": "analytic30-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Breached Credential with severity High found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic31",
+            "type": "Microsoft.Common.Section",
+            "label": "Breached Credential (Informational)",
+            "elements": [
+              {
+                "name": "analytic31-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Breached Credential with severity Informational found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic32",
+            "type": "Microsoft.Common.Section",
+            "label": "Breached Credential (Low)",
+            "elements": [
+              {
+                "name": "analytic32-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Breached Credential with severity Low found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic33",
+            "type": "Microsoft.Common.Section",
+            "label": "Breached Credential (Medium)",
+            "elements": [
+              {
+                "name": "analytic33-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Breached Credential with severity Medium found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic34",
+            "type": "Microsoft.Common.Section",
+            "label": "Code Repository",
+            "elements": [
+              {
+                "name": "analytic34-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New code_repository with severity FYI found"
@@ -529,12 +585,12 @@
             ]
           },
           {
-            "name": "analytic31",
+            "name": "analytic35",
             "type": "Microsoft.Common.Section",
             "label": "Code Repository (High)",
             "elements": [
               {
-                "name": "analytic31-text",
+                "name": "analytic35-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repository with severity High found"
@@ -543,12 +599,12 @@
             ]
           },
           {
-            "name": "analytic32",
+            "name": "analytic36",
             "type": "Microsoft.Common.Section",
             "label": "Code Repository (Low)",
             "elements": [
               {
-                "name": "analytic32-text",
+                "name": "analytic36-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repository with severity Low found"
@@ -557,12 +613,12 @@
             ]
           },
           {
-            "name": "analytic33",
+            "name": "analytic37",
             "type": "Microsoft.Common.Section",
             "label": "Code Repository (Medium)",
             "elements": [
               {
-                "name": "analytic33-text",
+                "name": "analytic37-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repository with severity Medium found"
@@ -571,12 +627,12 @@
             ]
           },
           {
-            "name": "analytic34",
+            "name": "analytic38",
             "type": "Microsoft.Common.Section",
             "label": "Code Repo (High)",
             "elements": [
               {
-                "name": "analytic34-text",
+                "name": "analytic38-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repo with severity High found"
@@ -585,12 +641,12 @@
             ]
           },
           {
-            "name": "analytic35",
+            "name": "analytic39",
             "type": "Microsoft.Common.Section",
             "label": "Code Repo (Informational)",
             "elements": [
               {
-                "name": "analytic35-text",
+                "name": "analytic39-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repo with severity Informational found"
@@ -599,12 +655,12 @@
             ]
           },
           {
-            "name": "analytic36",
+            "name": "analytic40",
             "type": "Microsoft.Common.Section",
             "label": "Code Repo (Low)",
             "elements": [
               {
-                "name": "analytic36-text",
+                "name": "analytic40-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repo with severity Low found"
@@ -613,12 +669,12 @@
             ]
           },
           {
-            "name": "analytic37",
+            "name": "analytic41",
             "type": "Microsoft.Common.Section",
             "label": "Code Repo (Medium)",
             "elements": [
               {
-                "name": "analytic37-text",
+                "name": "analytic41-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Code Repo with severity Medium found"
@@ -627,12 +683,12 @@
             ]
           },
           {
-            "name": "analytic38",
+            "name": "analytic42",
             "type": "Microsoft.Common.Section",
             "label": "Compromised Cards",
             "elements": [
               {
-                "name": "analytic38-text",
+                "name": "analytic42-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Compromised Cards with severity High found"
@@ -641,12 +697,12 @@
             ]
           },
           {
-            "name": "analytic39",
+            "name": "analytic43",
             "type": "Microsoft.Common.Section",
             "label": "Compromised Cards (Informational)",
             "elements": [
               {
-                "name": "analytic39-text",
+                "name": "analytic43-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Compromised Cards with severity Informational found"
@@ -655,12 +711,12 @@
             ]
           },
           {
-            "name": "analytic40",
+            "name": "analytic44",
             "type": "Microsoft.Common.Section",
             "label": "Compromised Cards (Low)",
             "elements": [
               {
-                "name": "analytic40-text",
+                "name": "analytic44-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Compromised Cards with severity Low found"
@@ -669,12 +725,12 @@
             ]
           },
           {
-            "name": "analytic41",
+            "name": "analytic45",
             "type": "Microsoft.Common.Section",
             "label": "Compromised Cards (Medium)",
             "elements": [
               {
-                "name": "analytic41-text",
+                "name": "analytic45-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Compromised Cards with severity Medium found"
@@ -683,12 +739,12 @@
             ]
           },
           {
-            "name": "analytic42",
+            "name": "analytic46",
             "type": "Microsoft.Common.Section",
             "label": "Cookies: HttpOnly Flag Not Used",
             "elements": [
               {
-                "name": "analytic42-text",
+                "name": "analytic46-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Cookies: HttpOnly Flag Not Used"
@@ -697,12 +753,12 @@
             ]
           },
           {
-            "name": "analytic43",
+            "name": "analytic47",
             "type": "Microsoft.Common.Section",
             "label": "Cookies: SameSite Flag Not Used",
             "elements": [
               {
-                "name": "analytic43-text",
+                "name": "analytic47-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Cookies: SameSite Flag Not Used"
@@ -711,12 +767,12 @@
             ]
           },
           {
-            "name": "analytic44",
+            "name": "analytic48",
             "type": "Microsoft.Common.Section",
             "label": "Cookies: Secure Flag Not Used",
             "elements": [
               {
-                "name": "analytic44-text",
+                "name": "analytic48-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Cookies: Secure Flag Not Used"
@@ -725,12 +781,12 @@
             ]
           },
           {
-            "name": "analytic45",
+            "name": "analytic49",
             "type": "Microsoft.Common.Section",
             "label": "Cyber Evil Twin Site (High)",
             "elements": [
               {
-                "name": "analytic45-text",
+                "name": "analytic49-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Cyber Evil Twin Site with severity High found"
@@ -739,12 +795,12 @@
             ]
           },
           {
-            "name": "analytic46",
+            "name": "analytic50",
             "type": "Microsoft.Common.Section",
             "label": "Cyber Evil Twin Site (Informational)",
             "elements": [
               {
-                "name": "analytic46-text",
+                "name": "analytic50-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Cyber Evil Twin Site with severity Informational found"
@@ -753,12 +809,12 @@
             ]
           },
           {
-            "name": "analytic47",
+            "name": "analytic51",
             "type": "Microsoft.Common.Section",
             "label": "Cyber Evil Twin Site (Low)",
             "elements": [
               {
-                "name": "analytic47-text",
+                "name": "analytic51-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Cyber Evil Twin Site with severity Low found"
@@ -767,12 +823,12 @@
             ]
           },
           {
-            "name": "analytic48",
+            "name": "analytic52",
             "type": "Microsoft.Common.Section",
             "label": "Cyber Evil Twin Site (Medium)",
             "elements": [
               {
-                "name": "analytic48-text",
+                "name": "analytic52-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Cyber Evil Twin Site with severity Medium found"
@@ -781,12 +837,12 @@
             ]
           },
           {
-            "name": "analytic49",
+            "name": "analytic53",
             "type": "Microsoft.Common.Section",
             "label": "Dark Web (High)",
             "elements": [
               {
-                "name": "analytic49-text",
+                "name": "analytic53-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Dark Web with severity High found"
@@ -795,12 +851,12 @@
             ]
           },
           {
-            "name": "analytic50",
+            "name": "analytic54",
             "type": "Microsoft.Common.Section",
             "label": "Dark Web (Informational)",
             "elements": [
               {
-                "name": "analytic50-text",
+                "name": "analytic54-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Dark Web with severity Informational found"
@@ -809,12 +865,12 @@
             ]
           },
           {
-            "name": "analytic51",
+            "name": "analytic55",
             "type": "Microsoft.Common.Section",
             "label": "Dark Web (Low)",
             "elements": [
               {
-                "name": "analytic51-text",
+                "name": "analytic55-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Dark Web with severity Low found"
@@ -823,12 +879,12 @@
             ]
           },
           {
-            "name": "analytic52",
+            "name": "analytic56",
             "type": "Microsoft.Common.Section",
             "label": "Dark Web (Medium)",
             "elements": [
               {
-                "name": "analytic52-text",
+                "name": "analytic56-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Dark Web with severity Medium found"
@@ -837,12 +893,12 @@
             ]
           },
           {
-            "name": "analytic53",
+            "name": "analytic57",
             "type": "Microsoft.Common.Section",
             "label": "Data Leakage (High)",
             "elements": [
               {
-                "name": "analytic53-text",
+                "name": "analytic57-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Data Leakage with severity High found"
@@ -851,12 +907,12 @@
             ]
           },
           {
-            "name": "analytic54",
+            "name": "analytic58",
             "type": "Microsoft.Common.Section",
             "label": "Data Leakage (Informational)",
             "elements": [
               {
-                "name": "analytic54-text",
+                "name": "analytic58-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Data Leakage with severity Informational found"
@@ -865,12 +921,12 @@
             ]
           },
           {
-            "name": "analytic55",
+            "name": "analytic59",
             "type": "Microsoft.Common.Section",
             "label": "Data Leakage (Low)",
             "elements": [
               {
-                "name": "analytic55-text",
+                "name": "analytic59-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Data Leakage with severity Low found"
@@ -879,12 +935,12 @@
             ]
           },
           {
-            "name": "analytic56",
+            "name": "analytic60",
             "type": "Microsoft.Common.Section",
             "label": "Data Leakage (Medium)",
             "elements": [
               {
-                "name": "analytic56-text",
+                "name": "analytic60-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Data Leakage with severity Medium found"
@@ -893,12 +949,12 @@
             ]
           },
           {
-            "name": "analytic57",
+            "name": "analytic61",
             "type": "Microsoft.Common.Section",
             "label": "Digital Content Theft (High)",
             "elements": [
               {
-                "name": "analytic57-text",
+                "name": "analytic61-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Digital Content Theft with severity High found"
@@ -907,12 +963,12 @@
             ]
           },
           {
-            "name": "analytic58",
+            "name": "analytic62",
             "type": "Microsoft.Common.Section",
             "label": "Digital Content Theft (Informational)",
             "elements": [
               {
-                "name": "analytic58-text",
+                "name": "analytic62-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Digital Content Theft with severity Informational found"
@@ -921,12 +977,12 @@
             ]
           },
           {
-            "name": "analytic59",
+            "name": "analytic63",
             "type": "Microsoft.Common.Section",
             "label": "Digital Content Theft (Low)",
             "elements": [
               {
-                "name": "analytic59-text",
+                "name": "analytic63-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Digital Content Theft with severity Low found"
@@ -935,12 +991,12 @@
             ]
           },
           {
-            "name": "analytic60",
+            "name": "analytic64",
             "type": "Microsoft.Common.Section",
             "label": "Digital Content Theft (Medium)",
             "elements": [
               {
-                "name": "analytic60-text",
+                "name": "analytic64-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Digital Content Theft with severity Medium found"
@@ -949,12 +1005,12 @@
             ]
           },
           {
-            "name": "analytic61",
+            "name": "analytic65",
             "type": "Microsoft.Common.Section",
             "label": "DMARC Not Configured",
             "elements": [
               {
-                "name": "analytic61-text",
+                "name": "analytic65-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "DMARC Not Configured"
@@ -963,12 +1019,12 @@
             ]
           },
           {
-            "name": "analytic62",
+            "name": "analytic66",
             "type": "Microsoft.Common.Section",
             "label": "Domain Infringement",
             "elements": [
               {
-                "name": "analytic62-text",
+                "name": "analytic66-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Domain Infringement"
@@ -977,12 +1033,12 @@
             ]
           },
           {
-            "name": "analytic63",
+            "name": "analytic67",
             "type": "Microsoft.Common.Section",
             "label": "Domain Infringement (High)",
             "elements": [
               {
-                "name": "analytic63-text",
+                "name": "analytic67-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Domain Infringement with severity High found"
@@ -991,12 +1047,12 @@
             ]
           },
           {
-            "name": "analytic64",
+            "name": "analytic68",
             "type": "Microsoft.Common.Section",
             "label": "Domain Infringement (Informational)",
             "elements": [
               {
-                "name": "analytic64-text",
+                "name": "analytic68-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Domain Infringement with severity Informational found"
@@ -1005,12 +1061,12 @@
             ]
           },
           {
-            "name": "analytic65",
+            "name": "analytic69",
             "type": "Microsoft.Common.Section",
             "label": "Domain Infringement (Medium)",
             "elements": [
               {
-                "name": "analytic65-text",
+                "name": "analytic69-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Domain Infringement with severity Medium found"
@@ -1019,12 +1075,12 @@
             ]
           },
           {
-            "name": "analytic66",
+            "name": "analytic70",
             "type": "Microsoft.Common.Section",
             "label": "Doorway Page (High)",
             "elements": [
               {
-                "name": "analytic66-text",
+                "name": "analytic70-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Doorway Page with severity High found"
@@ -1033,12 +1089,12 @@
             ]
           },
           {
-            "name": "analytic67",
+            "name": "analytic71",
             "type": "Microsoft.Common.Section",
             "label": "Doorway Page (Informational)",
             "elements": [
               {
-                "name": "analytic67-text",
+                "name": "analytic71-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Doorway Page with severity Informational found"
@@ -1047,12 +1103,12 @@
             ]
           },
           {
-            "name": "analytic68",
+            "name": "analytic72",
             "type": "Microsoft.Common.Section",
             "label": "Doorway Page (Low)",
             "elements": [
               {
-                "name": "analytic68-text",
+                "name": "analytic72-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Doorway Page with severity Low found"
@@ -1061,12 +1117,12 @@
             ]
           },
           {
-            "name": "analytic69",
+            "name": "analytic73",
             "type": "Microsoft.Common.Section",
             "label": "Doorway Page (Medium)",
             "elements": [
               {
-                "name": "analytic69-text",
+                "name": "analytic73-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Doorway Page with severity Medium found"
@@ -1075,12 +1131,12 @@
             ]
           },
           {
-            "name": "analytic70",
+            "name": "analytic74",
             "type": "Microsoft.Common.Section",
             "label": "Email Fraud (High)",
             "elements": [
               {
-                "name": "analytic70-text",
+                "name": "analytic74-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Email Fraud with severity High found"
@@ -1089,12 +1145,12 @@
             ]
           },
           {
-            "name": "analytic71",
+            "name": "analytic75",
             "type": "Microsoft.Common.Section",
             "label": "Email Fraud (Informational)",
             "elements": [
               {
-                "name": "analytic71-text",
+                "name": "analytic75-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Email Fraud with severity Informational found"
@@ -1103,12 +1159,12 @@
             ]
           },
           {
-            "name": "analytic72",
+            "name": "analytic76",
             "type": "Microsoft.Common.Section",
             "label": "Email Fraud (Low)",
             "elements": [
               {
-                "name": "analytic72-text",
+                "name": "analytic76-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Email Fraud with severity Low found"
@@ -1117,12 +1173,12 @@
             ]
           },
           {
-            "name": "analytic73",
+            "name": "analytic77",
             "type": "Microsoft.Common.Section",
             "label": "Email Fraud (Medium)",
             "elements": [
               {
-                "name": "analytic73-text",
+                "name": "analytic77-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Email Fraud with severity Medium found"
@@ -1131,12 +1187,124 @@
             ]
           },
           {
-            "name": "analytic74",
+            "name": "analytic78",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials 3Rd Party (High)",
+            "elements": [
+              {
+                "name": "analytic78-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials 3Rd Party with severity High found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic79",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials 3Rd Party (Informational)",
+            "elements": [
+              {
+                "name": "analytic79-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials 3Rd Party with severity Informational found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic80",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials 3Rd Party (Low)",
+            "elements": [
+              {
+                "name": "analytic80-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials 3Rd Party with severity Low found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic81",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials 3Rd Party (Medium)",
+            "elements": [
+              {
+                "name": "analytic81-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials 3Rd Party with severity Medium found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic82",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials Internal (High)",
+            "elements": [
+              {
+                "name": "analytic82-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials Internal with severity High found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic83",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials Internal (Informational)",
+            "elements": [
+              {
+                "name": "analytic83-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials Internal with severity Informational found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic84",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials Internal (Low)",
+            "elements": [
+              {
+                "name": "analytic84-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials Internal with severity Low found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic85",
+            "type": "Microsoft.Common.Section",
+            "label": "Employee Credentials Internal (Medium)",
+            "elements": [
+              {
+                "name": "analytic85-text",
+                "type": "Microsoft.Common.TextBlock",
+                "options": {
+                  "text": "New Employee Credentials Internal with severity Medium found"
+                }
+              }
+            ]
+          },
+          {
+            "name": "analytic86",
             "type": "Microsoft.Common.Section",
             "label": "Executive Impersonation",
             "elements": [
               {
-                "name": "analytic74-text",
+                "name": "analytic86-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Impersonation with severity Informational found"
@@ -1145,12 +1313,12 @@
             ]
           },
           {
-            "name": "analytic75",
+            "name": "analytic87",
             "type": "Microsoft.Common.Section",
             "label": "Executive Impersonation (High)",
             "elements": [
               {
-                "name": "analytic75-text",
+                "name": "analytic87-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Impersonation with severity High found"
@@ -1159,12 +1327,12 @@
             ]
           },
           {
-            "name": "analytic76",
+            "name": "analytic88",
             "type": "Microsoft.Common.Section",
             "label": "Executive Impersonation (Low)",
             "elements": [
               {
-                "name": "analytic76-text",
+                "name": "analytic88-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Impersonation with severity Low found"
@@ -1173,12 +1341,12 @@
             ]
           },
           {
-            "name": "analytic77",
+            "name": "analytic89",
             "type": "Microsoft.Common.Section",
             "label": "Executive Impersonation (Medium)",
             "elements": [
               {
-                "name": "analytic77-text",
+                "name": "analytic89-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Impersonation with severity Medium found"
@@ -1187,12 +1355,12 @@
             ]
           },
           {
-            "name": "analytic78",
+            "name": "analytic90",
             "type": "Microsoft.Common.Section",
             "label": "Executive Leaks (High)",
             "elements": [
               {
-                "name": "analytic78-text",
+                "name": "analytic90-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Leaks with severity High found"
@@ -1201,12 +1369,12 @@
             ]
           },
           {
-            "name": "analytic79",
+            "name": "analytic91",
             "type": "Microsoft.Common.Section",
             "label": "Executive Leaks (Informational)",
             "elements": [
               {
-                "name": "analytic79-text",
+                "name": "analytic91-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Leaks with severity Informational found"
@@ -1215,12 +1383,12 @@
             ]
           },
           {
-            "name": "analytic80",
+            "name": "analytic92",
             "type": "Microsoft.Common.Section",
             "label": "Executive Leaks (Low)",
             "elements": [
               {
-                "name": "analytic80-text",
+                "name": "analytic92-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Leaks with severity Low found"
@@ -1229,12 +1397,12 @@
             ]
           },
           {
-            "name": "analytic81",
+            "name": "analytic93",
             "type": "Microsoft.Common.Section",
             "label": "Executive Leaks (Medium)",
             "elements": [
               {
-                "name": "analytic81-text",
+                "name": "analytic93-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Executive Leaks with severity Medium found"
@@ -1243,12 +1411,12 @@
             ]
           },
           {
-            "name": "analytic82",
+            "name": "analytic94",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Admin Login Page",
             "elements": [
               {
-                "name": "analytic82-text",
+                "name": "analytic94-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Exposed Admin Login Page"
@@ -1257,12 +1425,12 @@
             ]
           },
           {
-            "name": "analytic83",
+            "name": "analytic95",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Email Address",
             "elements": [
               {
-                "name": "analytic83-text",
+                "name": "analytic95-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Email Address with severity High found"
@@ -1271,12 +1439,12 @@
             ]
           },
           {
-            "name": "analytic84",
+            "name": "analytic96",
             "type": "Microsoft.Common.Section",
             "label": "Exposed User List",
             "elements": [
               {
-                "name": "analytic84-text",
+                "name": "analytic96-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Exposed User List"
@@ -1285,12 +1453,12 @@
             ]
           },
           {
-            "name": "analytic85",
+            "name": "analytic97",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Email Address (Informational)",
             "elements": [
               {
-                "name": "analytic85-text",
+                "name": "analytic97-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Email Address with severity Informational found"
@@ -1299,12 +1467,12 @@
             ]
           },
           {
-            "name": "analytic86",
+            "name": "analytic98",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Email Address (Low)",
             "elements": [
               {
-                "name": "analytic86-text",
+                "name": "analytic98-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Email Address with severity Low found"
@@ -1313,12 +1481,12 @@
             ]
           },
           {
-            "name": "analytic87",
+            "name": "analytic99",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Email Address (Medium)",
             "elements": [
               {
-                "name": "analytic87-text",
+                "name": "analytic99-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Email Address with severity Medium found"
@@ -1327,12 +1495,12 @@
             ]
           },
           {
-            "name": "analytic88",
+            "name": "analytic100",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Misconfiguration (High)",
             "elements": [
               {
-                "name": "analytic88-text",
+                "name": "analytic100-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Misconfiguration with severity High found"
@@ -1341,12 +1509,12 @@
             ]
           },
           {
-            "name": "analytic89",
+            "name": "analytic101",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Misconfiguration (Informational)",
             "elements": [
               {
-                "name": "analytic89-text",
+                "name": "analytic101-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Misconfiguration with severity Informational found"
@@ -1355,12 +1523,12 @@
             ]
           },
           {
-            "name": "analytic90",
+            "name": "analytic102",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Misconfiguration (Low)",
             "elements": [
               {
-                "name": "analytic90-text",
+                "name": "analytic102-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Misconfiguration with severity Low found"
@@ -1369,12 +1537,12 @@
             ]
           },
           {
-            "name": "analytic91",
+            "name": "analytic103",
             "type": "Microsoft.Common.Section",
             "label": "Exposed Misconfiguration (Medium)",
             "elements": [
               {
-                "name": "analytic91-text",
+                "name": "analytic103-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Exposed Misconfiguration with severity Medium found"
@@ -1383,12 +1551,12 @@
             ]
           },
           {
-            "name": "analytic92",
+            "name": "analytic104",
             "type": "Microsoft.Common.Section",
             "label": "Fake Ad (High)",
             "elements": [
               {
-                "name": "analytic92-text",
+                "name": "analytic104-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Fake Ad with severity High found"
@@ -1397,12 +1565,12 @@
             ]
           },
           {
-            "name": "analytic93",
+            "name": "analytic105",
             "type": "Microsoft.Common.Section",
             "label": "Fake Ad (Informational)",
             "elements": [
               {
-                "name": "analytic93-text",
+                "name": "analytic105-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Fake Ad with severity Informational found"
@@ -1411,12 +1579,12 @@
             ]
           },
           {
-            "name": "analytic94",
+            "name": "analytic106",
             "type": "Microsoft.Common.Section",
             "label": "Fake Ad (Low)",
             "elements": [
               {
-                "name": "analytic94-text",
+                "name": "analytic106-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Fake Ad with severity Low found"
@@ -1425,12 +1593,12 @@
             ]
           },
           {
-            "name": "analytic95",
+            "name": "analytic107",
             "type": "Microsoft.Common.Section",
             "label": "Fake Ad (Medium)",
             "elements": [
               {
-                "name": "analytic95-text",
+                "name": "analytic107-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Fake Ad with severity Medium found"
@@ -1439,12 +1607,12 @@
             ]
           },
           {
-            "name": "analytic96",
+            "name": "analytic108",
             "type": "Microsoft.Common.Section",
             "label": "Hacker Chatter (High)",
             "elements": [
               {
-                "name": "analytic96-text",
+                "name": "analytic108-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Hacker Chatter with severity High found"
@@ -1453,12 +1621,12 @@
             ]
           },
           {
-            "name": "analytic97",
+            "name": "analytic109",
             "type": "Microsoft.Common.Section",
             "label": "Hacker Chatter (Informational)",
             "elements": [
               {
-                "name": "analytic97-text",
+                "name": "analytic109-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Hacker Chatter with severity Informational found"
@@ -1467,12 +1635,12 @@
             ]
           },
           {
-            "name": "analytic98",
+            "name": "analytic110",
             "type": "Microsoft.Common.Section",
             "label": "Hacker Chatter (Low)",
             "elements": [
               {
-                "name": "analytic98-text",
+                "name": "analytic110-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Hacker Chatter with severity Low found"
@@ -1481,12 +1649,12 @@
             ]
           },
           {
-            "name": "analytic99",
+            "name": "analytic111",
             "type": "Microsoft.Common.Section",
             "label": "Hacker Chatter (Medium)",
             "elements": [
               {
-                "name": "analytic99-text",
+                "name": "analytic111-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "New Hacker Chatter with severity Medium found"
@@ -1495,12 +1663,12 @@
             ]
           },
           {
-            "name": "analytic100",
+            "name": "analytic112",
             "type": "Microsoft.Common.Section",
             "label": "Header: Content Security Policy Missing",
             "elements": [
               {
-                "name": "analytic100-text",
+                "name": "analytic112-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Header: Content Security Policy Missing"
@@ -1509,12 +1677,12 @@
             ]
           },
           {
-            "name": "analytic101",
+            "name": "analytic113",
             "type": "Microsoft.Common.Section",
             "label": "Header: HTTP Strict Transport Security Missing",
             "elements": [
               {
-                "name": "analytic101-text",
+                "name": "analytic113-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Header: HTTP Strict Transport Security Missing"
@@ -1523,12 +1691,12 @@
             ]
           },
           {
-            "name": "analytic102",
+            "name": "analytic114",
             "type": "Microsoft.Common.Section",
             "label": "Header: Referrer-Policy Missing",
             "elements": [
               {
-                "name": "analytic102-text",
+                "name": "analytic114-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Header: Referrer-Policy Missing"
@@ -1537,12 +1705,12 @@
             ]
           },
           {
-            "name": "analytic103",
+            "name": "analytic115",
             "type": "Microsoft.Common.Section",
             "label": "Header: Web Server Exposed",
             "elements": [
               {
-                "name": "analytic103-text",
+                "name": "analytic115-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
                   "text": "Header: Web Server Exposed"
